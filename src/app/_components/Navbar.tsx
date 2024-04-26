@@ -1,3 +1,9 @@
+import {
+	SignInButton,
+	SignOutButton,
+	SignedIn,
+	SignedOut,
+} from "@clerk/nextjs";
 import React from "react";
 
 export default function Navbar() {
@@ -14,9 +20,14 @@ export default function Navbar() {
 					<li>
 						<a href="/">Home</a>
 					</li>
-					<li>
-						<a href="/">Sign In</a>
-					</li>
+					<div>
+						<SignedOut>
+							<SignInButton />
+						</SignedOut>
+						<SignedIn>
+							<SignOutButton />
+						</SignedIn>
+					</div>
 				</ul>
 			</div>
 		</nav>
