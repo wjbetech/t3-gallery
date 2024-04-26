@@ -32,7 +32,7 @@ Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/ver
 
 1. [O] deploy
 2. [O] scaffold UI with mock data
-3. [ ] set up DB (vercel postgresql)
+3. [O] set up DB (vercel postgresql)
 4. [ ] attach DB to project
 5. [ ] add auth
 6. [ ] add img upload
@@ -43,4 +43,4 @@ Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/ver
 11. [ ] rate-limiting
 
 extra:
-[ ] tidy build process
+[O] tidy build process
