@@ -5,6 +5,7 @@ import {
 	SignedOut,
 	UserButton,
 } from "@clerk/nextjs";
+import { UploadButton } from "~/utils/uploadthing";
 import React from "react";
 
 export default function Navbar() {
@@ -16,17 +17,19 @@ export default function Navbar() {
 			<div>
 				<input type="text" />
 			</div>
-			<div>
-				<ul className="flex gap-4">
-					<div className="flex">
-						<SignedOut>
-							<SignInButton />
-						</SignedOut>
-						<div className="gap-2">
-							<SignedIn>
-								<UserButton showName />
-							</SignedIn>
-						</div>
+			<div className="">
+				<ul className="">
+					<SignedOut>
+						<SignInButton />
+					</SignedOut>
+					<div className="gap-2 flex flex-row">
+						<SignedIn>
+							<UploadButton
+								endpoint="imageUploader"
+								className="scale-90 flex flex-row gap-4"
+							/>
+							<UserButton />
+						</SignedIn>
 					</div>
 				</ul>
 			</div>
