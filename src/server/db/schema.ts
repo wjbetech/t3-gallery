@@ -18,8 +18,8 @@ import {
  */
 export const createTable = pgTableCreator((name) => `t3-gallery_${name}`);
 
-export const posts = createTable(
-	"post",
+export const images = createTable(
+	"images",
 	{
 		id: serial("id").primaryKey(),
 		title: varchar("title", { length: 256 }),
