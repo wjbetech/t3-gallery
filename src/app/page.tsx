@@ -10,7 +10,7 @@ async function Images() {
 	return (
 		<div className="p-4">
 			<div className="grid grid-cols-3 gap-4 pt-2">
-				{[...images, ...images, ...images].map((img, index) => (
+				{images.map((img, index) => (
 					<div key={`${img.id}-${index}`} className="">
 						<img className="rounded-lg" src={img.url} alt="a cabin" />
 					</div>
