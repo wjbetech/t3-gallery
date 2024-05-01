@@ -35,7 +35,7 @@ Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/ver
 3. [O] set up DB (vercel postgresql)
 4. [O] attach DB to project
 5. [O] add auth
-6. [ ] add img upload
+6. [O] add img upload
 -  [ ] add taint (server-only)
 -  [ ] use Next/Image
 7. [ ] error management
