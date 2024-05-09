@@ -4,6 +4,8 @@ import { auth } from "@clerk/nextjs/server";
 import { images } from "./db/schema";
 import { and, eq } from "drizzle-orm";
 
+// n.b. we cannot call auth here because the auth call only runs inside of client components
+
 export async function getUserImages() {
 	// auth call
 	const user = auth();
