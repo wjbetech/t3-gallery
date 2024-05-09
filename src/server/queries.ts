@@ -1,9 +1,9 @@
 import "server-only";
 import { db } from "./db";
-import { auth } from "@clerk/nextjs/server";
+import { useAuth } from "@clerk/nextjs";
 
 // auth call
-const user = auth();
+const user = useAuth();
 
 export async function getUserImages() {
 	if (!user.userId) {
