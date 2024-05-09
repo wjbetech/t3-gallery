@@ -1,9 +1,11 @@
 import "server-only";
 import { db } from "./db";
-import { useAuth } from "@clerk/nextjs";
+import { auth } from "@clerk/nextjs/server";
+import { images } from "./db/schema";
+import { and, eq } from "drizzle-orm";
 
 // auth call
-const user = useAuth();
+const user = auth();
 
 export async function getUserImages() {
 	if (!user.userId) {
@@ -18,11 +20,14 @@ export async function getUserImages() {
 }
 
 export async function getImage(id: number) {
+	if (!user.userId) throw new Error("Unauthorised user!");
+
 	const image = await db.query.images.findFirst({
 		where: (model, { eq }) => eq(model.id, id),
 	});
 
 	if (!image) throw new Error("Image not found");
-	if (!user.userId) throw new Error("Unauthorised user!");
 	if (image.userId !== user.userId) throw new Error("Unauthorised!");
+
+	return image;
 }

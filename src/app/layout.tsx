@@ -9,6 +9,7 @@ import { Inter } from "next/font/google";
 import { extractRouterConfig } from "uploadthing/server";
 import { ourFileRouter } from "./api/uploadthing/core";
 import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
+// biome-ignore lint/style/useImportType: <explanation>
 import React from "react";
 const inter = Inter({
 	subsets: ["latin"],
