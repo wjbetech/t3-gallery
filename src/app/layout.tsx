@@ -26,7 +26,7 @@ export default function RootLayout({
 	modal,
 }: {
 	children: React.ReactNode;
-	modal;
+	modal: React.ReactNode;
 }) {
 	return (
 		<ClerkProvider>

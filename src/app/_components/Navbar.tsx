@@ -20,9 +20,6 @@ export default function Navbar() {
 			<div>
 				<h1 className="text-2xl font-bold">T3 Gallery</h1>
 			</div>
-			<div>
-				<input type="text" />
-			</div>
 			<div className="">
 				<ul className="">
 					<SignedOut>
