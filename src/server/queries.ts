@@ -4,10 +4,10 @@ import { auth } from "@clerk/nextjs/server";
 import { images } from "./db/schema";
 import { and, eq } from "drizzle-orm";
 
-// auth call
-const user = auth();
-
 export async function getUserImages() {
+	// auth call
+	const user = auth();
+
 	if (!user.userId) {
 		throw new Error("Unauthorised user!");
 	}
@@ -20,6 +20,9 @@ export async function getUserImages() {
 }
 
 export async function getImage(id: number) {
+	// auth call
+	const user = auth();
+
 	if (!user.userId) throw new Error("Unauthorised user!");
 
 	const image = await db.query.images.findFirst({
