@@ -30,19 +30,21 @@ Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/ver
 
 # TODO
 
-1. [O] deploy
-2. [O] scaffold UI with mock data
-3. [O] set up DB (vercel postgresql)
-4. [O] attach DB to project
-5. [O] add auth
-6. [O] add img upload
--  [O] add taint (server-only)
--  [ ] use Next/Image
-7. [ ] error management
-8. [ ] routing & img page (parallel routing)
-9. [ ] delete button /w server actions
-10. [ ] analytics
-11. [ ] rate-limiting
+- [O] deploy
+- [O] scaffold UI with mock data
+- [O] set up DB (vercel postgresql)
+- [O] attach DB to project
+- [O] add auth
+- [O] add img upload
+<!-- I deff don't know what a taint is still -->
+- [O] add taint (server-only)
+- [O] use Next/Image
+<!-- Read into what Sentry does under the hood -->
+- [O] error management
+- [ ] routing & img page (parallel routing)
+- [ ] delete button /w server actions
+- [ ] analytics
+- [ ] rate-limiting
 
 extra:
 [O] tidy build process

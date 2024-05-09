@@ -2,6 +2,7 @@ import Image from "next/image";
 import { SignInButton, SignedIn, SignedOut } from "@clerk/nextjs";
 import { db } from "~/server/db";
 import { getUserImages } from "~/server/queries";
+import Link from "next/link";
 
 export const dynamic = "force-dynamic";
 
@@ -22,14 +23,16 @@ async function Images() {
 					<div className="grid grid-cols-2 lg:grid-cols-3 gap-4 pt-2">
 						{images.map((img, index) => (
 							<div key={`${img.id}-${index}`} className="">
-								<Image
-									className="rounded-lg"
-									src={img.url}
-									width={480}
-									height={480}
-									style={{ objectFit: "contain" }}
-									alt="A picture of a cabin"
-								/>
+								<Link href={`/img/${img.id}`}>
+									<Image
+										className="rounded-lg"
+										src={img.url}
+										width={480}
+										height={480}
+										style={{ objectFit: "contain" }}
+										alt="A picture of a cabin"
+									/>
+								</Link>
 							</div>
 						))}
 					</div>

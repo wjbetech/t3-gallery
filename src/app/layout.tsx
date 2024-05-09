@@ -9,6 +9,7 @@ import { Inter } from "next/font/google";
 import { extractRouterConfig } from "uploadthing/server";
 import { ourFileRouter } from "./api/uploadthing/core";
 import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
+import type React from "react";
 const inter = Inter({
 	subsets: ["latin"],
 	variable: "--font-sans",
@@ -22,8 +23,10 @@ export const metadata = {
 
 export default function RootLayout({
 	children,
+	modal,
 }: {
 	children: React.ReactNode;
+	modal;
 }) {
 	return (
 		<ClerkProvider>
@@ -39,7 +42,9 @@ export default function RootLayout({
 						 */
 						routerConfig={extractRouterConfig(ourFileRouter)}
 					/>
-					{children}
+					<main>{children}</main>
+					{modal}
+					<div id="modal-root" />
 				</body>
 			</html>
 		</ClerkProvider>
