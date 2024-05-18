@@ -32,17 +32,17 @@ export default function RootLayout({
 	return (
 		<ClerkProvider>
 			<html lang="en">
+				<NextSSRPlugin
+					/**
+					 * The `extractRouterConfig` will extract **only** the route configs
+					 * from the router to prevent additional information from being
+					 * leaked to the client. The data passed to the client is the same
+					 * as if you were to fetch `/api/uploadthing` directly.
+					 */
+					routerConfig={extractRouterConfig(ourFileRouter)}
+				/>
 				<body className={`font-sans ${inter.variable} h-[calc(100vh-100px)]`}>
 					<Navbar />
-					<NextSSRPlugin
-						/**
-						 * The `extractRouterConfig` will extract **only** the route configs
-						 * from the router to prevent additional information from being
-						 * leaked to the client. The data passed to the client is the same
-						 * as if you were to fetch `/api/uploadthing` directly.
-						 */
-						routerConfig={extractRouterConfig(ourFileRouter)}
-					/>
 					<main>{children}</main>
 					{modal}
 					<div id="modal-root" />
