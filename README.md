@@ -45,6 +45,7 @@ Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/ver
 - [ ] delete button /w server actions
 - [ ] analytics
 - [ ] rate-limiting
+- [ ] allow for clicking outside modal to close it
 
 extra:
 [O] tidy build process
