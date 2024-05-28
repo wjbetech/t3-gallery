@@ -5,12 +5,12 @@ export default async function FullPageImageView(props: {
 }) {
 	const image = await getImage(props.id);
 	return (
-		<div className="flex w-full bg-black/75 text-white">
-			<img src={image.url} className="w-96" alt="" />
-			<div className="p-4">
-				<p>{image.userId}</p>
+		<div className="flex w-[600px] min-w-0 bg-black/75">
+			<div className="flex-shrink flex justify-center items-center">
+				<img src={image.url} className="flex-shrink" alt="" />
+			</div>
+			<div className="p-4 w-96 flex flex-col">
 				<p>{image.id}</p>
-				<p>{image.url}</p>x
 			</div>
 		</div>
 	);
