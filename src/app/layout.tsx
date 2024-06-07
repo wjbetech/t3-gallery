@@ -41,12 +41,15 @@ export default function RootLayout({
 					 */
 					routerConfig={extractRouterConfig(ourFileRouter)}
 				/>
-				<body className={`font-sans ${inter.variable} h-[calc(100vh-100px)]`}>
-					<Navbar />
-					<main>{children}</main>
-					<div id="modal-root">
-						{modal}
+				<body className={`font-sans ${inter.variable}`}>
+					<div className="h-screen grid grid-rows-[auto,1fr]">
+						<Navbar />
+						<main className="overflow-y-scroll">
+							{children}
+						</main>
 					</div>
+					{modal}
+					<div id="modal-root" />			
 				</body>
 			</html>
 		</ClerkProvider>
