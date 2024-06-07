@@ -52,7 +52,8 @@ export function SimpleUploadButton() {
       toast("Image(s) uploading...", { 
         duration: 100000,
         id: "navbar-upload-begin",
-
+        icon: <span className="loader"></span>,
+        className: "flex flex-row gap-4"
        });
     },
     onClientUploadComplete: () => {
