@@ -11,6 +11,7 @@ import { ourFileRouter } from "./api/uploadthing/core";
 import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
 // biome-ignore lint/style/useImportType: <explanation>
 import React from "react";
+import { Toaster } from "~/components/ui/sonner";
 const inter = Inter({
 	subsets: ["latin"],
 	variable: "--font-sans",
@@ -49,7 +50,8 @@ export default function RootLayout({
 						</main>
 					</div>
 					{modal}
-					<div id="modal-root" />			
+					<div id="modal-root" />		
+					<Toaster />	
 				</body>
 			</html>
 		</ClerkProvider>
