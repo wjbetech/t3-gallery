@@ -14,9 +14,11 @@ export default async function FullPageImageView(props: {
 				<img src={image.url} className="flex-shrink" alt="" />
 			</div>
 			<div className="p-4 w-96 flex flex-col justify-between border-l">
+				<h1 className="font-bold">{image.title}</h1>
 				<p>Photo #{image.id}</p>
-				<div>
-					<p>Uploaded By: <span>{uploaderInfo.firstName}</span></p>
+				<div className="flex flex-col gap-2 text-xs">
+					<span>Uploaded By {uploaderInfo.firstName}</span>
+					<span>{new Date(image.createdAt).toLocaleDateString()}</span>
 				</div>
 			</div>
 		</div>
