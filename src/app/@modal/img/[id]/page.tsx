@@ -11,7 +11,7 @@ export default async function PhotoModal({
 
 	return (
 		<Modal>
-			<FullPageImageView id={idAsNumber} />
+			<FullPageImageView photoId={idAsNumber} />
 		</Modal>
 	);
 }

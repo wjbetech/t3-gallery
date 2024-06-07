@@ -44,8 +44,9 @@ export default function RootLayout({
 				<body className={`font-sans ${inter.variable} h-[calc(100vh-100px)]`}>
 					<Navbar />
 					<main>{children}</main>
-					{modal}
-					<div id="modal-root" />
+					<div id="modal-root">
+						{modal}
+					</div>
 				</body>
 			</html>
 		</ClerkProvider>
