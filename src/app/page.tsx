@@ -20,12 +20,12 @@ async function Images() {
 				</div>
 			) : (
 				<div className="p-4">
-					<div className="grid grid-cols-2 lg:grid-cols-3 gap-4 pt-2">
+					<div className="grid grid-cols-2 lg:grid-cols-3 gap-6 pt-2">
 						{images.map((img, index) => (
 							<div key={`${img.id}-${index}`} className="">
 								<Link href={`/img/${img.id}`}>
 									<Image
-										className="rounded-lg"
+										className="rounded-lg bg-[hsl(0,0%,98.4%,0.2)] bg-fixed opacity-90 transition duration-300 ease-in-out hover:opacity-100 hover:shadow-md hover:shadow-gray-400/75"
 										src={img.url}
 										width={480}
 										height={480}
