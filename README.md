@@ -41,6 +41,7 @@ Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/ver
 - [O] use Next/Image
 <!-- Read into what Sentry does under the hood -->
 - [O] error management
+<!-- cannot seem to get this to work currently -->
 - [ ] routing & img page (parallel routing)
 - [ ] delete button /w server actions
 - [ ] analytics
@@ -48,4 +49,4 @@ Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/ver
 - [ ] allow for clicking outside modal to close it
 
 extra:
-[O] tidy build process
+- [O] tidy build process

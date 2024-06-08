@@ -7,6 +7,7 @@ import Link from "next/link";
 export const dynamic = "force-dynamic";
 
 async function Images() {
+	
 	// get images from server/queries.ts
 	const images = await getUserImages();
 
