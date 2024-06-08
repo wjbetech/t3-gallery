@@ -7,7 +7,7 @@ import Link from "next/link";
 export const dynamic = "force-dynamic";
 
 async function Images() {
-	
+
 	// get images from server/queries.ts
 	const images = await getUserImages();
 
@@ -23,14 +23,13 @@ async function Images() {
 				<div className="p-4">
 					<div className="grid grid-cols-2 lg:grid-cols-3 gap-6 pt-2">
 						{images.map((img, index) => (
-							<div key={`${img.id}-${index}`} className="">
+							<div key={`${img.id}-${index}`} className="overflow-hidden bg-cover bg-no-repeat rounded-md border-[2px] border-transparent hover:border-gray-500">
 								<Link href={`/img/${img.id}`}>
 									<Image
-										className="rounded-lg bg-[hsl(0,0%,98.4%,0.2)] bg-fixed opacity-90 transition duration-300 ease-in-out hover:opacity-100 hover:shadow-md hover:shadow-gray-400/75"
+										className="rounded-md transition duration-300 ease-in-out hover:backdrop-filter hover:scale-105 object-cover h-[500px] w-full"
 										src={img.url}
-										width={480}
-										height={480}
-										style={{ objectFit: "contain" }}
+										width={360}
+										height={360}
 										alt="A picture of a cabin"
 									/>
 								</Link>
